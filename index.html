@@ -108,6 +108,21 @@ tr:last-child td{border-bottom:0}
 th{font:600 12px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 td.n{font-family:var(--f-mono);white-space:nowrap;font-variant-numeric:tabular-nums}
 .tablewrap{overflow-x:auto}
+.scale{display:flex;flex-direction:column}
+.xrow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr) 76px;gap:6px 14px;padding:12px;border-bottom:1px solid var(--rule);align-items:center}
+.xrow:last-child{border-bottom:0}
+.who{min-width:0}
+.who b{display:block;font-weight:600}
+.who span{font-size:13px;color:var(--muted)}
+.track{position:relative;height:16px;background:#eceae5;border:1px solid var(--win-lo)}
+.track .fill{position:absolute;inset:0 auto 0 0;background:var(--block)}
+.track .range{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(90deg,var(--block) 0 4px,transparent 4px 7px)}
+.track .today{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--up)}
+.lbl{font:700 15px var(--f-mono);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.xnote{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);align-items:center}
+.legend i{display:inline-block;width:14px;height:10px;vertical-align:-1px;margin-right:6px}
+@media (max-width:560px){.xrow{grid-template-columns:minmax(0,1fr) 70px}.xrow .track{grid-column:1/-1;grid-row:2}}
 
 .cert-form{display:flex;gap:10px;flex-wrap:wrap}
 .cert-form input{flex:1 1 220px;min-width:0;font:15px var(--f-body);padding:8px 10px;border:2px solid;border-color:var(--win-lo) var(--win-hi) var(--win-hi) var(--win-lo);background:var(--field);color:var(--ink)}
@@ -185,14 +200,10 @@ footer a{color:#fff}
     <div class="bar"><span>experts.txt</span><span class="tb" aria-hidden="true">×</span></div>
     <div class="body">
       <h2 id="h2b">Ce qu'en disent les experts</h2>
-      <p class="small muted">Des estimations publiques, chacune avec sa source.</p>
-      <div class="tablewrap sunk">
-        <table>
-          <thead><tr><th>Qui</th><th>Estimation</th><th>Source</th></tr></thead>
-          <tbody id="experts"></tbody>
-        </table>
-      </div>
-      <p class="small muted">Chaque chiffre est une opinion personnelle, pas une mesure. Les définitions de « doom » et les horizons de temps varient d'une personne à l'autre.</p>
+      <p class="small muted">Du plus serein au plus inquiet. Chaque estimation renvoie à l'article qui la rapporte.</p>
+      <div class="legend"><span><i style="background:var(--block)"></i>Estimation</span><span><i style="background:repeating-linear-gradient(90deg,var(--block) 0 4px,transparent 4px 7px)"></i>Fourchette</span><span><i style="background:var(--up);width:3px"></i>Notre barre du jour</span></div>
+      <div class="sunk scale" id="experts"></div>
+      <p class="small muted">Chaque chiffre est une opinion personnelle, pas une mesure. Les horizons de temps varient : 10 ans pour l'un, 30 ou 100 ans pour d'autres. <a href="https://en.wikipedia.org/wiki/P(doom)" target="_blank" rel="noopener">C'est quoi, p(doom) ?</a></p>
     </div>
   </section>
 
@@ -342,7 +353,15 @@ footer a{color:#fff}
       document.getElementById('more').onclick = ()=>{ L.innerHTML = data.entries.map(row).join(''); document.getElementById('moreRow').hidden=true; };
     }
 
-    document.getElementById('experts').innerHTML = data.experts.map(x=>`<tr><td>${esc(x.who)}</td><td class="n">${esc(x.estimate)}</td><td><a href="${esc(x.source.url)}" target="_blank" rel="noopener">${esc(x.source.name)}</a></td></tr>`).join('');
+    document.getElementById('experts').innerHTML = data.experts.slice().sort((a,b)=>a.lo-b.lo || a.hi-b.hi).map(x=>{
+      const range = x.hi > x.lo ? `<span class="range" style="left:${x.lo}%;width:${x.hi-x.lo}%"></span>` : '';
+      return `<div class="xrow">
+        <div class="who"><b>${esc(x.who)}</b><span>${esc(x.role)}</span></div>
+        <div class="track" aria-hidden="true"><span class="fill" style="width:${x.lo}%"></span>${range}<span class="today" style="left:${p}%"></span></div>
+        <div class="lbl">${esc(x.label)}</div>
+        <div class="xnote">${esc(x.note)} <a href="${esc(x.source.url)}" target="_blank" rel="noopener">${esc(x.source.name)}, ${esc(x.source.date)}</a></div>
+      </div>`;
+    }).join('');
     drawChart(data);
   }
 

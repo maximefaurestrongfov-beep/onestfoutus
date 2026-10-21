@@ -21,51 +21,107 @@
   ],
   "experts": [
     {
-      "who": "Roman Yampolskiy, chercheur en sécurité de l'IA",
-      "estimate": "99,99 %",
+      "who": "Yann LeCun",
+      "role": "pionnier de l'IA, ex-Meta",
+      "label": "≈ 0 %",
+      "lo": 0,
+      "hi": 0,
+      "note": "Juge l'idée « ridiculement absurde » (traduit).",
       "source": {
-        "name": "Axios",
-        "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic"
+        "name": "Fortune",
+        "date": "juin 2023",
+        "url": "https://fortune.com/2023/06/15/yann-lecun-ai-godfather-destroy-humanity-threat"
       }
     },
     {
-      "who": "Elon Musk",
-      "estimate": "≈ 20 %",
+      "who": "Sondage de près de 2 800 chercheurs en IA",
+      "role": "AI Impacts, 2023",
+      "label": "5 %",
+      "lo": 5,
+      "hi": 5,
+      "note": "Médiane des réponses pour l'extinction humaine ou une perte de contrôle aussi grave.",
       "source": {
-        "name": "Axios",
-        "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic"
+        "name": "IEEE Spectrum",
+        "date": "janv. 2024",
+        "url": "https://spectrum.ieee.org/ai-existential-risk-survey"
       }
     },
     {
-      "who": "Dario Amodei, PDG d'Anthropic",
-      "estimate": "10–25 %",
+      "who": "Evan Hubinger",
+      "role": "alignement, Anthropic",
+      "label": "> 10 %",
+      "lo": 10,
+      "hi": 10,
+      "note": "Plus de 10 % de risque d'extinction d'ici dix ans.",
       "source": {
-        "name": "Axios",
-        "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic"
+        "name": "CAIS",
+        "date": "sept. 2026",
+        "url": "https://newsletter.safe.ai/p/aisn-81-anthropic-researchers-resignation"
       }
     },
     {
       "who": "Geoffrey Hinton",
-      "estimate": "10–20 %",
+      "role": "prix Nobel de physique 2024",
+      "label": "10–20 %",
+      "lo": 10,
+      "hi": 20,
+      "note": "Sur les 30 prochaines années, dit-il à la BBC.",
+      "source": {
+        "name": "Macao News",
+        "date": "déc. 2024",
+        "url": "https://macaonews.org/news/around-the-world/ai-humanity-exitenstial-threat-hinton/"
+      }
+    },
+    {
+      "who": "Elon Musk",
+      "role": "xAI",
+      "label": "10–20 %",
+      "lo": 10,
+      "hi": 20,
+      "note": "« Je suis probablement d'accord avec Geoff Hinton, environ 10 ou 20 % » (traduit).",
+      "source": {
+        "name": "TechRadar",
+        "date": "avril 2024",
+        "url": "https://www.techradar.com/pro/top-ai-researcher-says-ai-will-end-humanity-and-we-should-stop-developing-it-now-but-dont-worry-elon-musk-disagrees"
+      }
+    },
+    {
+      "who": "Dario Amodei",
+      "role": "PDG d'Anthropic",
+      "label": "25 %",
+      "lo": 25,
+      "hi": 25,
+      "note": "« 25 % de chances que les choses tournent vraiment, vraiment mal » (traduit).",
       "source": {
         "name": "Axios",
-        "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic"
+        "date": "sept. 2025",
+        "url": "https://www.axios.com/2025/09/17/anthropic-dario-amodei-p-doom-25-percent"
       }
     },
     {
-      "who": "Moyenne des chercheurs en IA sondés",
-      "estimate": "≈ 14 %",
+      "who": "Eliezer Yudkowsky",
+      "role": "chercheur, MIRI",
+      "label": "> 99 %",
+      "lo": 99,
+      "hi": 99,
+      "note": "Coauteur de « If Anyone Builds It, Everyone Dies » (2025).",
       "source": {
-        "name": "Cosmos Institute",
-        "url": "https://blog.cosmos-institute.org/p/not-even-wrong"
+        "name": "Pause IA",
+        "date": "2024",
+        "url": "https://pauseia.substack.com/p/classement-pdoom-des-scientifiques"
       }
     },
     {
-      "who": "Evan Hubinger, alignement chez Anthropic",
-      "estimate": "> 10 % sur 10 ans",
+      "who": "Roman Yampolskiy",
+      "role": "chercheur en sécurité de l'IA",
+      "label": "99,9 %",
+      "lo": 99.9,
+      "hi": 99.9,
+      "note": "Sur les 100 prochaines années, chez Lex Fridman.",
       "source": {
-        "name": "CAIS",
-        "url": "https://newsletter.safe.ai/p/aisn-81-anthropic-researchers-resignation"
+        "name": "Futurism",
+        "date": "juin 2024",
+        "url": "https://futurism.com/the-byte/researcher-99-percent-chance-ai-destroy-humankind"
       }
     }
   ]
