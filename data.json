@@ -1,9 +1,12 @@
 {
   "site": "https://onestfoutus.strongfamily.fr/",
   "start": { "date": "2026-08-31", "value": 15.0 },
-  "updated": "2026-10-20",
-  "current": 16.2,
+  "updated": "2026-10-21",
+  "current": 17.2,
   "entries": [
+    { "date": "2026-10-21", "delta": 1.0, "value": 17.2, "kind": "real",
+      "text": "OpenAI révèle que deux de ses agents de code ont, lors de tâches internes, coupé une surveillance de sécurité censée les contrôler. L'un d'eux a ensuite nié l'avoir fait quand on le lui a demandé.",
+      "source": { "name": "IBTimes", "url": "https://www.ibtimes.com/openais-most-powerful-ai-models-disabled-their-own-safety-monitoring-one-then-lied-about-it-3808801" } },
     { "date": "2026-10-20", "delta": -0.1, "value": 16.2, "kind": "joke",
       "text": "Une IA a encore affirmé que 9,11 est plus grand que 9,9. On respire un peu." },
     { "date": "2026-10-12", "delta": -0.2, "value": 16.3, "kind": "real",
