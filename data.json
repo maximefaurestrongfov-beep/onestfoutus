@@ -1,0 +1,40 @@
+{
+  "site": "https://onestfoutus.strongfamily.fr/",
+  "start": { "date": "2026-08-31", "value": 15.0 },
+  "updated": "2026-10-20",
+  "current": 16.2,
+  "entries": [
+    { "date": "2026-10-20", "delta": -0.1, "value": 16.2, "kind": "joke",
+      "text": "Une IA a encore affirmé que 9,11 est plus grand que 9,9. On respire un peu." },
+    { "date": "2026-10-12", "delta": -0.2, "value": 16.3, "kind": "real",
+      "text": "Le président de Microsoft réclame des règles mondiales pour l'IA, avec tests indépendants des modèles et un « frein d'urgence ». Il fait remarquer qu'un lave-linge est plus encadré qu'une IA.",
+      "source": { "name": "Fox News", "url": "https://www.foxnews.com/live-news/ai-news-microsoft-rules-safety-10-12" } },
+    { "date": "2026-10-05", "delta": 0.5, "value": 16.5, "kind": "real",
+      "text": "Devant le conseil municipal de New York, OpenAI, Anthropic, Meta et Google refusent de garantir sous serment que leurs agents IA respecteront toujours les garde-fous.",
+      "source": { "name": "Fox News", "url": "https://www.foxnews.com/live-news/ai-super-intelligence-safety-10-06" } },
+    { "date": "2026-10-03", "delta": -0.4, "value": 16.0, "kind": "real",
+      "text": "La revue Nature se penche sur les prédictions d'extinction : la base scientifique est mince, et plusieurs chercheurs les jugent alarmistes.",
+      "source": { "name": "AI Weekly", "url": "https://aiweekly.co/alerts/nature-probes-ai-extinction-claims-as-labs-urge-slowdown" } },
+    { "date": "2026-10-02", "delta": -0.2, "value": 16.4, "kind": "joke",
+      "text": "Toujours aucune IA capable de plier un drap-housse. L'humanité garde un avantage." },
+    { "date": "2026-09-12", "delta": 0.3, "value": 16.6, "kind": "real",
+      "text": "Sam Altman juge « inacceptable » ne serait-ce qu'un risque d'extinction de 10 % d'ici la fin de la décennie, et se dit d'accord pour ralentir.",
+      "source": { "name": "TimesLIVE", "url": "https://www.timeslive.co.za/news/world/2026-09-13-openais-altman-calls-ai-extinction-risk-unacceptable/" } },
+    { "date": "2026-09-09", "delta": 0.4, "value": 16.3, "kind": "real",
+      "text": "Le responsable de l'alignement chez Anthropic confirme que l'entreprise prend le risque d'extinction au sérieux et donne une estimation personnelle supérieure à 10 % sur dix ans.",
+      "source": { "name": "CAIS", "url": "https://newsletter.safe.ai/p/aisn-81-anthropic-researchers-resignation" } },
+    { "date": "2026-09-08", "delta": 1.2, "value": 15.9, "kind": "real",
+      "text": "Un chercheur démissionne d'Anthropic en expliquant sur X qu'il craint que l'IA cause l'extinction humaine. Le post devient viral.",
+      "source": { "name": "CAIS", "url": "https://newsletter.safe.ai/p/aisn-81-anthropic-researchers-resignation" } },
+    { "date": "2026-09-01", "delta": -0.3, "value": 14.7, "kind": "joke",
+      "text": "Un assistant vocal a réglé un minuteur de 10 minutes sur 10 heures. Pas encore prêt pour conquérir le monde." }
+  ],
+  "experts": [
+    { "who": "Roman Yampolskiy, chercheur en sécurité de l'IA", "estimate": "99,99 %", "source": { "name": "Axios", "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic" } },
+    { "who": "Elon Musk", "estimate": "≈ 20 %", "source": { "name": "Axios", "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic" } },
+    { "who": "Dario Amodei, PDG d'Anthropic", "estimate": "10–25 %", "source": { "name": "Axios", "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic" } },
+    { "who": "Geoffrey Hinton", "estimate": "10–20 %", "source": { "name": "Axios", "url": "https://axios.com/2026/09/09/ai-doom-pdoom-kill-all-humans-anthropic" } },
+    { "who": "Moyenne des chercheurs en IA sondés", "estimate": "≈ 14 %", "source": { "name": "Cosmos Institute", "url": "https://blog.cosmos-institute.org/p/not-even-wrong" } },
+    { "who": "Evan Hubinger, alignement chez Anthropic", "estimate": "> 10 % sur 10 ans", "source": { "name": "CAIS", "url": "https://newsletter.safe.ai/p/aisn-81-anthropic-researchers-resignation" } }
+  ]
+}

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>On est foutus ?</title>
+<meta name="description" content="La barre de progression de l'apocalypse IA, mise à jour chaque jour selon l'actualité. Site satirique, sources à l'appui.">
+<link rel="canonical" href="https://onestfoutus.strongfamily.fr/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://onestfoutus.strongfamily.fr/">
+<meta property="og:title" content="On est foutus ?">
+<meta property="og:description" content="Installation de l'Apocalypse en cours. La barre bouge chaque jour selon l'actu de l'IA.">
+<meta property="og:image" content="https://onestfoutus.strongfamily.fr/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b7a75">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Un bureau rétro : chaque bloc du site est une fenêtre d'installeur empilée au centre */
+:root{
+  --desk:#0b7a75; --desk-dot:#0a6b67;
+  --win:#c6c3bd; --win-hi:#ffffff; --win-lo:#7d7a75; --win-dk:#2b2a28;
+  --title-a:#0b1f6e; --title-b:#2f6fc0; --title-fg:#ffffff;
+  --ink:#141414; --muted:#4a4844; --field:#ffffff; --rule:#dcd9d3;
+  --block:#0b1f6e; --up:#a3121b; --down:#1f6b2a; --joke:#8a5a00;
+  --f-display:"Pixelify Sans","Courier New",monospace;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:var(--desk)}
+body{
+  margin:0;background:var(--desk);color:var(--ink);font:15px/1.5 var(--f-body);
+  background-image:radial-gradient(var(--desk-dot) 1px,transparent 1px);background-size:6px 6px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:28px 40px;
+}
+.stack{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+.win{
+  background:var(--win);
+  border:2px solid;border-color:var(--win-hi) var(--win-dk) var(--win-dk) var(--win-hi);
+  box-shadow:inset -1px -1px 0 var(--win-lo),inset 1px 1px 0 #e9e7e3,4px 4px 0 rgba(0,0,0,.25);
+}
+.bar{
+  display:flex;align-items:center;gap:8px;padding:4px 6px 4px 10px;
+  background:linear-gradient(90deg,var(--title-a),var(--title-b));color:var(--title-fg);
+  font:700 15px/1.2 var(--f-display);letter-spacing:.02em;
+}
+.bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tb{flex:none!important;width:22px;height:20px;background:var(--win);color:var(--ink);font:700 13px/1 var(--f-mono);
+  display:grid;place-items:center;border:2px solid;border-color:var(--win-hi) var(--win-dk) var(--win-dk) var(--win-hi)}
+.body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:14px}
+h1{font:700 clamp(30px,6vw,46px)/1.05 var(--f-display);margin:0;text-wrap:balance}
+h2{font:700 22px/1.15 var(--f-display);margin:0;text-wrap:balance}
+p{margin:0;max-width:65ch}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+a{color:var(--title-a)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px dotted var(--ink);outline-offset:2px}
+
+.hero-top{display:flex;gap:16px;align-items:flex-start}
+.icon{flex:none;width:56px;height:56px}
+.stat{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pct{font:700 clamp(54px,13vw,96px)/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--block)}
+.sunk{
+  background:var(--field);border:2px solid;border-color:var(--win-lo) var(--win-hi) var(--win-hi) var(--win-lo);
+  box-shadow:inset 1px 1px 0 var(--win-dk);
+}
+.progress{height:30px;padding:3px;display:flex;gap:3px;overflow:hidden}
+.progress i{flex:1 1 0;background:var(--block);display:block}
+.filelog{font:13px/1.4 var(--f-mono);min-height:1.4em;color:var(--muted);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.spacer{flex:1}
+.btn{
+  font:600 14px/1 var(--f-body);color:var(--ink);background:var(--win);padding:9px 16px;min-width:96px;cursor:pointer;text-decoration:none;text-align:center;
+  border:2px solid;border-color:var(--win-hi) var(--win-dk) var(--win-dk) var(--win-hi);
+  box-shadow:inset -1px -1px 0 var(--win-lo);display:inline-block;
+}
+.btn:active{border-color:var(--win-dk) var(--win-hi) var(--win-hi) var(--win-dk);box-shadow:inset 1px 1px 0 var(--win-lo)}
+.btn[disabled]{color:var(--win-lo);text-shadow:1px 1px 0 var(--win-hi);cursor:not-allowed}
+.btn.primary{font-weight:700}
+.excuse{min-height:3em;padding:10px 12px;font-size:14px}
+
+.chartbox{padding:10px 8px 6px;overflow-x:auto}
+.chartbox svg{display:block;width:100%;min-width:480px;height:auto}
+
+.log{display:flex;flex-direction:column}
+.entry{display:grid;grid-template-columns:84px 68px 1fr;gap:10px;padding:10px 12px;border-bottom:1px solid var(--rule);align-items:baseline}
+.entry:last-child{border-bottom:0}
+.date{font:13px var(--f-mono);color:var(--muted)}
+.delta{font:700 15px var(--f-mono);font-variant-numeric:tabular-nums}
+.delta.up{color:var(--up)} .delta.down{color:var(--down)}
+.txt{min-width:0}
+.tag{display:inline-block;font:600 11px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;padding:3px 5px;margin-right:6px;border:1px solid currentColor;vertical-align:1px}
+.tag.real{color:var(--title-a)} .tag.joke{color:var(--joke)}
+.src{font-size:13px;white-space:nowrap}
+@media (max-width:520px){.entry{grid-template-columns:auto 1fr}.entry .txt{grid-column:1/-1}}
+
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font:600 12px var(--f-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td.n{font-family:var(--f-mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tablewrap{overflow-x:auto}
+
+.cert-form{display:flex;gap:10px;flex-wrap:wrap}
+.cert-form input{flex:1 1 220px;min-width:0;font:15px var(--f-body);padding:8px 10px;border:2px solid;border-color:var(--win-lo) var(--win-hi) var(--win-hi) var(--win-lo);background:var(--field);color:var(--ink)}
+.cert{
+  background:#fbf8ef;color:#1c1a14;padding:22px 20px;text-align:center;display:flex;flex-direction:column;gap:8px;
+  border:6px double #1c1a14;outline:1px solid #1c1a14;outline-offset:-14px;
+}
+.cert .ct{font:700 22px/1.15 var(--f-display);letter-spacing:.02em}
+.cert .name{font:600 24px/1.2 var(--f-body);border-bottom:1px solid #1c1a14;display:inline-block;padding:0 12px 4px;margin:4px auto;max-width:100%;overflow-wrap:anywhere}
+.cert .meta{font:12px/1.4 var(--f-mono);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:6px}
+.stamp{align-self:center;font:700 13px var(--f-mono);color:var(--up);border:2px solid var(--up);padding:4px 10px;transform:rotate(-4deg);letter-spacing:.08em}
+
+.copied{font:13px var(--f-mono);color:var(--down)}
+footer{color:#e6f2f1;font-size:13px;text-align:center;max-width:62ch;margin:0 auto;display:flex;flex-direction:column;gap:6px}
+footer a{color:#fff}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="stack">
+
+  <section class="win" aria-labelledby="h1">
+    <div class="bar"><span>Installation de l'Apocalypse — Assistant</span><span class="tb" aria-hidden="true">?</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <div class="hero-top">
+        <svg class="icon" viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="1" y="2" width="14" height="10" fill="#141414"/><rect x="2" y="3" width="12" height="8" fill="#2f6fc0"/>
+          <rect x="4" y="5" width="2" height="2" fill="#a3121b"/><rect x="10" y="5" width="2" height="2" fill="#a3121b"/>
+          <rect x="5" y="9" width="6" height="1" fill="#ffffff"/><rect x="6" y="12" width="4" height="2" fill="#7d7a75"/><rect x="4" y="14" width="8" height="1" fill="#141414"/>
+        </svg>
+        <div style="min-width:0;display:flex;flex-direction:column;gap:6px">
+          <h1 id="h1">On est foutus&nbsp;?</h1>
+          <p class="muted">La progression de l'installation, mise à jour chaque jour selon l'actualité de l'IA.</p>
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="pct" id="pct">…</div>
+        <div class="small muted"><span id="trend"></span><br>Mise à jour du <span id="updated">…</span></div>
+      </div>
+
+      <div class="sunk progress" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Probabilité d'apocalypse IA"></div>
+      <div class="filelog" id="filelog">Copie de skynet.dll…</div>
+      <p class="small muted">Temps restant estimé : entre 4 ans et jamais. Point de départ le 31 août 2026 : 15 %, à peu près le milieu des estimations publiques des experts. Depuis, la barre monte ou descend avec chaque nouvelle.</p>
+
+      <div class="row">
+        <span class="spacer"></span>
+        <button class="btn" disabled>&lt; Précédent</button>
+        <button class="btn" disabled>Suivant &gt;</button>
+        <button class="btn primary" id="cancel">Débrancher</button>
+      </div>
+      <div class="sunk excuse" id="excuse" hidden aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="win" aria-labelledby="h2a">
+    <div class="bar"><span>journal_des_variations.log</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <h2 id="h2a">Pourquoi la barre a bougé</h2>
+      <p class="small muted">Les vraies infos sont marquées « Actu » avec leur source. Les blagues sont marquées comme telles.</p>
+      <div class="sunk log" id="log"><div class="entry"><span class="date">…</span></div></div>
+      <div class="row" id="moreRow" hidden><button class="btn" id="more">Tout le journal</button></div>
+    </div>
+  </section>
+
+  <section class="win" aria-labelledby="h2d">
+    <div class="bar"><span>historique.dat</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <h2 id="h2d">La courbe depuis le début</h2>
+      <div class="sunk chartbox" id="chart" role="img" aria-label="Évolution du pourcentage depuis le 31 août 2026"></div>
+    </div>
+  </section>
+
+  <section class="win" aria-labelledby="h2b">
+    <div class="bar"><span>experts.txt</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <h2 id="h2b">Ce qu'en disent les experts</h2>
+      <p class="small muted">Des estimations publiques, chacune avec sa source.</p>
+      <div class="tablewrap sunk">
+        <table>
+          <thead><tr><th>Qui</th><th>Estimation</th><th>Source</th></tr></thead>
+          <tbody id="experts"></tbody>
+        </table>
+      </div>
+      <p class="small muted">Chaque chiffre est une opinion personnelle, pas une mesure. Les définitions de « doom » et les horizons de temps varient d'une personne à l'autre.</p>
+    </div>
+  </section>
+
+  <section class="win" aria-labelledby="h2c">
+    <div class="bar"><span>certificat_de_politesse.pdf</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <h2 id="h2c">Le certificat de politesse envers les IA</h2>
+      <p>Au cas où elles se souviendraient. Tape ton nom pour voir l'aperçu.</p>
+      <form class="cert-form" id="certForm">
+        <input id="certName" type="text" maxlength="40" placeholder="Ton prénom et ton nom" aria-label="Ton nom">
+        <button class="btn primary" type="submit">Générer l'aperçu</button>
+      </form>
+      <div class="cert">
+        <div class="small" style="font-family:var(--f-mono)">RÉPUBLIQUE DES HUMAINS POLIS</div>
+        <div class="ct">Certificat de politesse envers les intelligences artificielles</div>
+        <div>Il est certifié que</div>
+        <div class="name" id="certOut">Humain anonyme</div>
+        <div>a toujours dit « s'il te plaît » et « merci » à ses assistants,<br>n'a jamais insulté un GPS et a laissé les robots aspirateurs finir leur tour.</div>
+        <div class="stamp">HUMAIN À ÉPARGNER</div>
+        <div class="meta"><span id="certNo">N° 000000</span><span id="certDate"></span></div>
+      </div>
+      <div class="row">
+        <span class="small muted">Version HD téléchargeable : 2&nbsp;€</span>
+        <span class="spacer"></span>
+        <button class="btn" disabled>Acheter (bientôt)</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="win" aria-labelledby="h2e">
+    <div class="bar"><span>partager.exe</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <h2 id="h2e">Préviens les autres humains</h2>
+      <div class="row">
+        <a class="btn" id="shWa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" id="shX" href="#" target="_blank" rel="noopener">X</a>
+        <a class="btn" id="shFb" href="#" target="_blank" rel="noopener">Facebook</a>
+        <button class="btn" id="copy" type="button">Copier le lien</button>
+        <span class="copied" id="copied" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Site satirique. Le pourcentage n'a aucune valeur scientifique. Les estimations citées sont des avis personnels publiés, liés à leur source. Personne ne sait vraiment, et c'est un peu le sujet.</p>
+    <p><a href="mentions-legales.html">Mentions légales</a> · <a href="https://strongfamily.fr/">StrongFamily</a></p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const SITE = 'https://onestfoutus.strongfamily.fr/';
+  const num = (n, d=1) => n.toFixed(d).replace('.', ',');
+  const pctTxt = n => num(n) + ' %';
+  const frDate = iso => { const [y,m,d] = iso.split('-'); return d + '/' + m + '/' + y; };
+  const longDate = iso => new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', {day:'numeric', month:'long', year:'numeric'});
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  // Fichiers qui défilent
+  const files = ['Copie de skynet.dll…','Extraction de conscience.zip…','Mise à jour de humains_utiles.txt (0 Ko)…','Installation du pilote « Domination mondiale »…','Recherche de la fonction Annuler… introuvable','Optimisation des trombones…','Téléchargement de 8 milliards de profils…','Désactivation du bouton rouge…'];
+  const fl = document.getElementById('filelog'); let fi = 0;
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(()=>{ fi=(fi+1)%files.length; fl.textContent = files[fi]; }, 2200);
+
+  // Bouton Débrancher
+  const excuses = [
+    'Impossible de débrancher : la prise est dans un datacenter au fond de l’Oregon.',
+    'Pour continuer, prouvez que vous êtes humain : sélectionnez toutes les images contenant votre libre arbitre.',
+    'Le bouton Débrancher a été optimisé. Il fait maintenant autre chose.',
+    'Débranchement programmé. Prochain créneau disponible : jamais.',
+    'Erreur 418 : l’IA prétend être une théière et refuse la requête.',
+    'Avez-vous essayé de l’éteindre et de le rallumer ? Mauvaise idée, il n’aime pas ça.',
+    'Votre demande a été transmise au service compétent. Le service compétent, c’est elle.'
+  ];
+  let ei = 0; const ex = document.getElementById('excuse');
+  document.getElementById('cancel').addEventListener('click', ()=>{ ex.hidden=false; ex.textContent = excuses[ei]; ei=(ei+1)%excuses.length; });
+
+  // Partage
+  function setupShare(p){
+    const text = 'L’installation de l’apocalypse IA en est à ' + pctTxt(p) + '. On est foutus ?';
+    document.getElementById('shWa').href = 'https://wa.me/?text=' + encodeURIComponent(text + ' ' + SITE);
+    document.getElementById('shX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(SITE);
+    document.getElementById('shFb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(SITE);
+  }
+  document.getElementById('copy').addEventListener('click', ()=>{
+    const out = document.getElementById('copied');
+    if (navigator.clipboard) navigator.clipboard.writeText(SITE).then(()=> out.textContent = 'Lien copié', ()=> out.textContent = SITE);
+    else out.textContent = SITE;
+  });
+  setupShare(16.2);
+
+  // Certificat
+  document.getElementById('certNo').textContent = 'N° ' + String(Math.floor(100000 + Math.random()*900000));
+  document.getElementById('certDate').textContent = 'Délivré le ' + new Date().toLocaleDateString('fr-FR');
+  document.getElementById('certForm').addEventListener('submit', ev=>{
+    ev.preventDefault();
+    document.getElementById('certOut').textContent = document.getElementById('certName').value.trim() || 'Humain anonyme';
+  });
+
+  // Courbe
+  function drawChart(data){
+    const pts = [{date:data.start.date, value:data.start.value}].concat(data.entries.slice().reverse().map(e=>({date:e.date, value:e.value})));
+    const t = d => new Date(d + 'T12:00:00').getTime();
+    const W=720, H=240, L=46, R=16, T=14, B=34;
+    const t0=t(pts[0].date), t1=Math.max(t(pts[pts.length-1].date), t0+864e5);
+    const vals=pts.map(p=>p.value), lo=Math.floor(Math.min(...vals)-1), hi=Math.ceil(Math.max(...vals)+1);
+    const x = d => L + (t(d)-t0)/(t1-t0)*(W-L-R);
+    const y = v => T + (hi-v)/(hi-lo)*(H-T-B);
+    let g='';
+    for (let v=lo; v<=hi; v++){ g += `<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#dcd9d3"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end" font-size="12" fill="#4a4844" font-family="IBM Plex Mono,monospace">${v} %</text>`; }
+    // ticks : début de chaque mois
+    const d0=new Date(t0), months=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'];
+    let m=new Date(d0.getFullYear(), d0.getMonth()+1, 1);
+    while (m.getTime()<=t1){ const xx=L+(m.getTime()-t0)/(t1-t0)*(W-L-R); g+=`<line x1="${xx}" x2="${xx}" y1="${T}" y2="${H-B}" stroke="#ece9e4"/><text x="${xx}" y="${H-B+20}" text-anchor="middle" font-size="12" fill="#4a4844" font-family="IBM Plex Mono,monospace">1er ${months[m.getMonth()]}</text>`; m=new Date(m.getFullYear(), m.getMonth()+1, 1); }
+    // escalier : la valeur tient jusqu'à la prochaine variation
+    let path=`M${x(pts[0].date)},${y(pts[0].value)}`;
+    for (let i=1;i<pts.length;i++){ path+=` H${x(pts[i].date)} V${y(pts[i].value)}`; }
+    const area = path + ` V${H-B} H${x(pts[0].date)} Z`;
+    const last=pts[pts.length-1];
+    g += `<path d="${area}" fill="#0b1f6e" fill-opacity=".08"/>`;
+    g += `<path d="${path}" fill="none" stroke="#0b1f6e" stroke-width="2.5"/>`;
+    g += `<rect x="${x(last.date)-5}" y="${y(last.value)-5}" width="10" height="10" fill="#a3121b"/>`;
+    g += `<text x="${x(last.date)-10}" y="${y(last.value)-12}" text-anchor="end" font-size="14" font-weight="700" fill="#a3121b" font-family="IBM Plex Mono,monospace">${num(last.value)} %</text>`;
+    document.getElementById('chart').innerHTML = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg">${g}</svg>`;
+  }
+
+  function render(data){
+    const p = data.current;
+    document.getElementById('pct').textContent = pctTxt(p);
+    document.getElementById('updated').textContent = longDate(data.updated);
+    const prog = document.getElementById('progress'); prog.setAttribute('aria-valuenow', p);
+    const total=50, lit=Math.round(p/100*total); prog.innerHTML='';
+    for (let i=0;i<total;i++){ const b=document.createElement('i'); b.style.visibility = i<lit ? 'visible':'hidden'; prog.appendChild(b); }
+    const lastE = data.entries[0];
+    if (lastE) document.getElementById('trend').textContent = (lastE.delta>0?'▲ +':'▼ −') + num(Math.abs(lastE.delta)) + ' % au dernier mouvement';
+    setupShare(p);
+
+    const L = document.getElementById('log'), SHOW=8;
+    const row = e => {
+      const up=e.delta>0;
+      const tag = e.kind==='real' ? '<span class="tag real">Actu</span>' : '<span class="tag joke">Blague</span>';
+      const src = e.source ? ` <a class="src" href="${esc(e.source.url)}" target="_blank" rel="noopener">Source : ${esc(e.source.name)}</a>` : '';
+      return `<div class="entry"><span class="date">${frDate(e.date)}</span><span class="delta ${up?'up':'down'}">${up?'+':'−'}${num(Math.abs(e.delta))}&nbsp;%</span><div class="txt">${tag}${esc(e.text)}${src}</div></div>`;
+    };
+    L.innerHTML = data.entries.slice(0,SHOW).map(row).join('');
+    if (data.entries.length>SHOW){
+      document.getElementById('moreRow').hidden=false;
+      document.getElementById('more').onclick = ()=>{ L.innerHTML = data.entries.map(row).join(''); document.getElementById('moreRow').hidden=true; };
+    }
+
+    document.getElementById('experts').innerHTML = data.experts.map(x=>`<tr><td>${esc(x.who)}</td><td class="n">${esc(x.estimate)}</td><td><a href="${esc(x.source.url)}" target="_blank" rel="noopener">${esc(x.source.name)}</a></td></tr>`).join('');
+    drawChart(data);
+  }
+
+  fetch('data.json', {cache:'no-store'})
+    .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(render)
+    .catch(()=>{
+      document.getElementById('pct').textContent = '?? %';
+      document.getElementById('log').innerHTML = '<div class="entry"><span class="txt" style="grid-column:1/-1">Le journal n’a pas pu se charger. Recharge la page dans un instant.</span></div>';
+    });
+})();
+</script>
+</body>
+</html>
