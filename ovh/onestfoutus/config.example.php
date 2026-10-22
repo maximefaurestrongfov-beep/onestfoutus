@@ -5,7 +5,7 @@ return [
     'stripe_key'      => 'rk_live_A_REMPLACER',
 
     // Identifiant du lien de paiement (commence par plink_). Laisse vide pour ne pas vérifier.
-    'payment_link'    => '',
+    'payment_link'    => 'plink_1UTS6zLXMdcYJ2lwsaIQIxNE',
 
     // Montant minimum en centimes (2 € = 200).
     'min_amount'      => 200,

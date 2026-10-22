@@ -310,7 +310,7 @@ footer a{color:#fff}
   document.getElementById('certNo').textContent = 'N° ' + String(Math.floor(100000 + Math.random()*900000));
   document.getElementById('certDate').textContent = 'Délivré le ' + new Date().toLocaleDateString('fr-FR');
   // Paiement Stripe : lien de paiement, le nom est gardé pour la page merci.html
-  const STRIPE_LINK = '';
+  const STRIPE_LINK = 'https://buy.stripe.com/28EaEYeykfL04nLaEv5J600';
   const buy = document.getElementById('buy');
   if (STRIPE_LINK) { buy.href = STRIPE_LINK; buy.removeAttribute('aria-disabled'); }
   else { buy.textContent = 'Acheter (bientôt)'; }

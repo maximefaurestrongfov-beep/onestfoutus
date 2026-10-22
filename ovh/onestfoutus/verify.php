@@ -48,10 +48,19 @@ if ($status !== 200) {
 }
 
 $s = json_decode($body, true);
+
+// Avec la conversion de devises de Stripe (Adaptive Pricing), le montant d'origine en euros est dans currency_conversion
+$currency = $s['currency'] ?? '';
+$amount   = (int)($s['amount_total'] ?? 0);
+if (!empty($s['currency_conversion']['source_currency'])) {
+    $currency = $s['currency_conversion']['source_currency'];
+    $amount   = (int)($s['currency_conversion']['amount_total'] ?? 0);
+}
+
 $ok = ($s['status'] ?? '') === 'complete'
    && ($s['payment_status'] ?? '') === 'paid'
-   && ($s['currency'] ?? '') === 'eur'
-   && (int)($s['amount_total'] ?? 0) >= (int)$config['min_amount'];
+   && $currency === 'eur'
+   && $amount >= (int)$config['min_amount'];
 
 if ($ok && !empty($config['payment_link'])) {
     $ok = ($s['payment_link'] ?? '') === $config['payment_link'];
