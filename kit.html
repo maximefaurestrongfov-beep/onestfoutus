@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kit de fin du monde · On est foutus ?</title>
+<meta name="description" content="Es-tu prêt pour l'apocalypse IA ? Fais le test en 12 actions et prépare ton kit de fin du monde. Site satirique.">
+<link rel="canonical" href="https://onestfoutus.strongfamily.fr/kit.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://onestfoutus.strongfamily.fr/kit.html">
+<meta property="og:title" content="Es-tu prêt pour la fin du monde ?">
+<meta property="og:description" content="12 actions à cocher et le kit à avoir sous la main. Fais le test.">
+<meta property="og:image" content="https://onestfoutus.strongfamily.fr/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b7a75">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Même bureau rétro que l'accueil : une fenêtre "test", une fenêtre "kit" */
+:root{
+  --desk:#0b7a75; --desk-dot:#0a6b67;
+  --win:#c6c3bd; --win-hi:#ffffff; --win-lo:#7d7a75; --win-dk:#2b2a28;
+  --title-a:#0b1f6e; --title-b:#2f6fc0; --title-fg:#ffffff;
+  --ink:#141414; --muted:#4a4844; --field:#ffffff; --rule:#dcd9d3;
+  --block:#0b1f6e; --up:#a3121b; --down:#1f6b2a; --joke:#8a5a00;
+  --f-display:"Pixelify Sans","Courier New",monospace;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:var(--desk)}
+body{
+  margin:0;background:var(--desk);color:var(--ink);font:15px/1.5 var(--f-body);
+  background-image:radial-gradient(var(--desk-dot) 1px,transparent 1px);background-size:6px 6px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:28px 40px;
+}
+.stack{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+.win{background:var(--win);border:2px solid;border-color:var(--win-hi) var(--win-dk) var(--win-dk) var(--win-hi);
+  box-shadow:inset -1px -1px 0 var(--win-lo),inset 1px 1px 0 #e9e7e3,4px 4px 0 rgba(0,0,0,.25)}
+.bar{display:flex;align-items:center;gap:8px;padding:4px 6px 4px 10px;background:linear-gradient(90deg,var(--title-a),var(--title-b));color:var(--title-fg);font:700 15px/1.2 var(--f-display);letter-spacing:.02em}
+.bar span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tb{flex:none!important;width:22px;height:20px;background:var(--win);color:var(--ink);font:700 13px/1 var(--f-mono);display:grid;place-items:center;border:2px solid;border-color:var(--win-hi) var(--win-dk) var(--win-dk) var(--win-hi)}
+.body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:14px}
+h1{font:700 clamp(30px,6vw,44px)/1.05 var(--f-display);margin:0;text-wrap:balance}
+h2{font:700 22px/1.15 var(--f-display);margin:0;text-wrap:balance}
+h3{font:600 12px/1.2 var(--f-mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:6px 0 0}
+p{margin:0;max-width:65ch}
+.muted{color:var(--muted)} .small{font-size:13px}
+a{color:var(--title-a)}
+a:focus-visible,button:focus-visible,input:focus-visible,label:focus-within{outline:2px dotted var(--ink);outline-offset:2px}
+.sunk{background:var(--field);border:2px solid;border-color:var(--win-lo) var(--win-hi) var(--win-hi) var(--win-lo);box-shadow:inset 1px 1px 0 var(--win-dk)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.spacer{flex:1}
+.btn{font:600 14px/1 var(--f-body);color:var(--ink);background:var(--win);padding:9px 16px;cursor:pointer;text-decoration:none;text-align:center;display:inline-block;
+  border:2px solid;border-color:var(--win-hi) var(--win-dk) var(--win-dk) var(--win-hi);box-shadow:inset -1px -1px 0 var(--win-lo)}
+.btn:active{border-color:var(--win-dk) var(--win-hi) var(--win-hi) var(--win-dk);box-shadow:inset 1px 1px 0 var(--win-lo)}
+.btn.primary{font-weight:700}
+.back{color:#fff;font-size:14px}
+
+/* Test */
+.score{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.score .big{font:700 clamp(48px,11vw,80px)/1 var(--f-display);font-variant-numeric:tabular-nums;color:var(--block)}
+.verdict{font-weight:600}
+.progress{height:24px;padding:3px;display:flex;gap:3px;overflow:hidden}
+.progress i{flex:1 1 0;background:var(--down);display:block}
+.checks{display:flex;flex-direction:column}
+.check{display:grid;grid-template-columns:24px 1fr;gap:10px;padding:10px 12px;border-bottom:1px solid var(--rule);cursor:pointer;align-items:start}
+.check:last-child{border-bottom:0}
+.check input{appearance:none;width:20px;height:20px;margin:2px 0 0;background:var(--field);cursor:pointer;
+  border:2px solid;border-color:var(--win-lo) var(--win-hi) var(--win-hi) var(--win-lo);box-shadow:inset 1px 1px 0 var(--win-dk);display:grid;place-items:center}
+.check input:checked::after{content:"✓";font:700 15px/1 var(--f-mono);color:var(--down)}
+.check b{font-weight:600;display:block}
+.check span{font-size:13px;color:var(--muted)}
+.check:has(input:checked) b{text-decoration:line-through;text-decoration-color:var(--win-lo)}
+.copied{font:13px var(--f-mono);color:var(--down)}
+
+/* Kit */
+.disclose{padding:8px 12px;font-size:13px}
+.items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:600px){.items{grid-template-columns:1fr}}
+.item{padding:14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.item .top{display:flex;gap:12px;align-items:center}
+.item svg{flex:none;width:40px;height:40px}
+.item b{font-weight:600;font-size:16px;line-height:1.25}
+.item p{font-size:14px}
+.item .why{font-size:13px;color:var(--muted)}
+.item .btn{align-self:flex-start;margin-top:auto}
+.tag{display:inline-block;font:600 11px/1 var(--f-mono);text-transform:uppercase;letter-spacing:.06em;padding:3px 5px;border:1px solid currentColor}
+.tag.real{color:var(--down)} .tag.joke{color:var(--joke)}
+footer{color:#e6f2f1;font-size:13px;text-align:center;max-width:62ch;margin:0 auto;display:flex;flex-direction:column;gap:6px}
+footer a{color:#fff}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="stack">
+  <a class="back" href="./">&lt; Retour à la barre de progression</a>
+
+  <section class="win" aria-labelledby="h1">
+    <div class="bar"><span>test_de_preparation.exe</span><span class="tb" aria-hidden="true">?</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <h1 id="h1">Es-tu prêt pour la fin du monde&nbsp;?</h1>
+      <p class="muted">Coche ce que tu as déjà fait. La moitié est vraiment utile en cas de panne ou de coupure, l'autre moitié est surtout utile pour ta conscience.</p>
+      <div class="score">
+        <div class="big" id="score">0&nbsp;%</div>
+        <div class="verdict" id="verdict">Tu seras le premier à paniquer quand le Wi-Fi coupera.</div>
+      </div>
+      <div class="sunk progress" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Ton niveau de préparation"></div>
+      <div class="sunk checks" id="checks"></div>
+      <div class="row">
+        <a class="btn" id="shWa" href="#" target="_blank" rel="noopener">Partager sur WhatsApp</a>
+        <a class="btn" id="shX" href="#" target="_blank" rel="noopener">Partager sur X</a>
+        <button class="btn" id="copy" type="button">Copier mon score</button>
+        <span class="copied" id="copied" aria-live="polite"></span>
+        <span class="spacer"></span>
+        <button class="btn" id="reset" type="button">Tout décocher</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="win" aria-labelledby="h2">
+    <div class="bar"><span>kit_de_fin_du_monde.zip</span><span class="tb" aria-hidden="true">×</span></div>
+    <div class="body">
+      <h2 id="h2">Le kit de fin du monde</h2>
+      <p class="muted">De quoi tenir quelques jours sans courant, sans réseau et sans assistant. Ce sont aussi les bases d'un vrai kit d'urgence, donc ça ne sert pas qu'en cas d'apocalypse.</p>
+      <div class="sunk disclose">Liens affiliés : si tu achètes via ces liens, le site touche une petite commission, sans surcoût pour toi. En tant que Partenaire Amazon, le site réalise un bénéfice sur les achats remplissant les conditions requises.</div>
+      <h3>Vraiment utile</h3>
+      <div class="items" id="kitReal"></div>
+      <h3>Moralement utile</h3>
+      <div class="items" id="kitJoke"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Site satirique. Rien ici n'est un conseil de sécurité officiel. En cas d'urgence réelle, appelle le 112.</p>
+    <p><a href="./">On est foutus ?</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="https://strongfamily.fr/">StrongFamily</a></p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  // Identifiant Amazon Partenaires (finit par -21). Vide = liens sans commission.
+  const AMAZON_TAG = '';
+  const SITE = 'https://onestfoutus.strongfamily.fr/kit.html';
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  const actions = [
+    ['merci', 'Dire « merci » à ton assistant vocal aujourd’hui', 'Au cas où il se souviendrait.'],
+    ['numeros', 'Noter 5 numéros importants sur papier', 'Tu connais combien de numéros par cœur ? Voilà.'],
+    ['gps', 'Savoir rentrer chez toi sans GPS', 'Depuis ton travail, sans tricher.'],
+    ['photos', 'Sauvegarder tes photos sur un disque à toi', 'Pas seulement dans un cloud qui appartient à quelqu’un d’autre.'],
+    ['eau', 'Avoir quelques litres d’eau d’avance', 'La base de tout kit d’urgence, apocalypse ou simple coupure.'],
+    ['disjoncteur', 'Savoir où sont le disjoncteur et le robinet d’arrivée d’eau', 'Tu serais étonné du nombre de gens qui ne savent pas.'],
+    ['lampe', 'Avoir une lampe avec des piles qui marchent', 'Celle du tiroir ne compte pas si tu n’as pas vérifié.'],
+    ['cash', 'Garder un peu d’argent liquide', 'Le jour où le terminal de paiement fera grève.'],
+    ['voisins', 'Connaître tes voisins par leur prénom', 'Ils seront ton réseau quand l’autre sera coupé.'],
+    ['manuel', 'Savoir faire un vrai truc de tes mains', 'Changer une roue, faire un feu, réparer une fuite.'],
+    ['livre', 'Lire un livre entier sans écran', 'Pour vérifier que ton cerveau sait encore le faire seul.'],
+    ['sansia', 'Tenir une journée sans rien demander à une IA', 'Celle-là est la plus dure. On sait.']
+  ];
+  const verdicts = [
+    [0, 'Tu seras le premier à paniquer quand le Wi-Fi coupera.'],
+    [25, 'Tu tiendras jusqu’au premier soir. Peut-être.'],
+    [50, 'Correct. Tu survivras, mais tu vas te plaindre.'],
+    [75, 'Solide. Les voisins vont venir frapper chez toi.'],
+    [100, 'Prêt à 100 %. Les IA te considèrent déjà comme un adversaire sérieux.']
+  ];
+
+  let state = {};
+  try { state = JSON.parse(localStorage.getItem('oef-kit') || '{}') || {}; } catch(e) { state = {}; }
+  const save = () => { try { localStorage.setItem('oef-kit', JSON.stringify(state)); } catch(e) {} };
+
+  const box = document.getElementById('checks');
+  box.innerHTML = actions.map(([id,t,s]) => `<label class="check" for="c-${id}"><input type="checkbox" id="c-${id}" data-id="${id}"${state[id]?' checked':''}><div><b>${esc(t)}</b><span>${esc(s)}</span></div></label>`).join('');
+
+  const prog = document.getElementById('progress');
+  for (let i=0;i<actions.length;i++){ prog.appendChild(document.createElement('i')); }
+
+  function update(){
+    const n = actions.filter(([id]) => state[id]).length;
+    const pct = Math.round(n / actions.length * 100);
+    document.getElementById('score').textContent = pct + ' %';
+    prog.setAttribute('aria-valuenow', pct);
+    [...prog.children].forEach((b,i) => b.style.visibility = i < n ? 'visible' : 'hidden');
+    let v = verdicts[0][1]; verdicts.forEach(([min,t]) => { if (pct >= min) v = t; });
+    document.getElementById('verdict').textContent = v;
+    const text = 'Je suis prêt à ' + pct + ' % pour la fin du monde. Et toi ?';
+    document.getElementById('shWa').href = 'https://wa.me/?text=' + encodeURIComponent(text + ' ' + SITE);
+    document.getElementById('shX').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(SITE);
+    document.getElementById('copy').dataset.text = text + ' ' + SITE;
+  }
+  box.addEventListener('change', e => { const id = e.target.dataset.id; if (!id) return; state[id] = e.target.checked; save(); update(); });
+  document.getElementById('reset').addEventListener('click', () => { state = {}; save(); box.querySelectorAll('input').forEach(i => i.checked = false); update(); });
+  document.getElementById('copy').addEventListener('click', e => {
+    const out = document.getElementById('copied'), t = e.currentTarget.dataset.text;
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(() => out.textContent = 'Copié', () => out.textContent = t);
+    else out.textContent = t;
+  });
+  update();
+
+  // Kit
+  const icon = {
+    radio:'<rect x="2" y="6" width="12" height="8" fill="#141414"/><rect x="3" y="7" width="5" height="6" fill="#7d7a75"/><rect x="9" y="8" width="4" height="1" fill="#fff"/><rect x="9" y="10" width="2" height="2" fill="#a3121b"/><rect x="11" y="2" width="1" height="4" fill="#141414"/>',
+    lamp:'<rect x="3" y="6" width="10" height="5" fill="#0b1f6e"/><rect x="6" y="7" width="4" height="3" fill="#ffd84a"/><rect x="1" y="7" width="2" height="3" fill="#141414"/><rect x="13" y="7" width="2" height="3" fill="#141414"/>',
+    water:'<rect x="6" y="2" width="4" height="2" fill="#141414"/><rect x="5" y="4" width="6" height="10" fill="#2f6fc0"/><rect x="6" y="6" width="1" height="6" fill="#bcd6f5"/>',
+    battery:'<rect x="2" y="5" width="11" height="7" fill="#141414"/><rect x="13" y="7" width="2" height="3" fill="#141414"/><rect x="3" y="6" width="6" height="5" fill="#1f6b2a"/><rect x="9" y="6" width="3" height="5" fill="#7d7a75"/>',
+    aid:'<rect x="2" y="4" width="12" height="9" fill="#fff"/><rect x="2" y="4" width="12" height="9" fill="none" stroke="#141414"/><rect x="7" y="5" width="2" height="7" fill="#a3121b"/><rect x="4" y="7" width="8" height="2" fill="#a3121b"/>',
+    fire:'<rect x="5" y="9" width="6" height="5" fill="#141414"/><rect x="6" y="4" width="4" height="5" fill="#e4572e"/><rect x="7" y="2" width="2" height="3" fill="#ffd84a"/>',
+    book:'<rect x="3" y="2" width="10" height="12" fill="#0b1f6e"/><rect x="4" y="3" width="8" height="10" fill="#2f6fc0"/><rect x="5" y="5" width="6" height="1" fill="#fff"/><rect x="5" y="7" width="4" height="1" fill="#fff"/>',
+    cards:'<rect x="2" y="3" width="8" height="11" fill="#fff" stroke="#141414"/><rect x="6" y="2" width="8" height="11" fill="#fff" stroke="#141414"/><rect x="9" y="5" width="2" height="2" fill="#a3121b"/><rect x="8" y="7" width="4" height="2" fill="#a3121b"/>',
+    map:'<rect x="1" y="3" width="14" height="10" fill="#e9e2c8"/><rect x="5" y="3" width="1" height="10" fill="#7d7a75"/><rect x="10" y="3" width="1" height="10" fill="#7d7a75"/><rect x="2" y="9" width="6" height="1" fill="#a3121b"/><rect x="7" y="6" width="6" height="1" fill="#a3121b"/>',
+    disk:'<rect x="3" y="3" width="10" height="11" fill="#141414"/><rect x="4" y="4" width="8" height="5" fill="#7d7a75"/><rect x="10" y="11" width="2" height="1" fill="#1f6b2a"/>',
+    note:'<rect x="3" y="2" width="9" height="12" fill="#fff" stroke="#141414"/><rect x="5" y="5" width="5" height="1" fill="#7d7a75"/><rect x="5" y="7" width="5" height="1" fill="#7d7a75"/><rect x="12" y="3" width="2" height="10" fill="#e4572e"/>',
+    board:'<rect x="1" y="2" width="14" height="12" fill="#e9e2c8" stroke="#141414"/><rect x="4" y="5" width="2" height="2" fill="#141414"/><rect x="10" y="9" width="2" height="2" fill="#fff" stroke="#141414"/>'
+  };
+  const kit = [
+    {k:'real', i:'radio', n:'Radio à manivelle et solaire', d:'Pour écouter la fin en direct quand le Wi-Fi aura choisi son camp.', w:'Marche sans pile ni réseau. Souvent avec lampe et prise USB intégrées.', q:'radio manivelle solaire'},
+    {k:'real', i:'lamp', n:'Lampe frontale', d:'Les deux mains libres pour débrancher les serveurs.', w:'Bien plus pratique qu’une lampe torche en cas de coupure.', q:'lampe frontale rechargeable'},
+    {k:'real', i:'water', n:'Réserve d’eau', d:'L’eau du robinet sera peut-être gérée par une IA. Méfiance.', w:'Un jerrican alimentaire, ou une paille filtrante pour la randonnée.', q:'jerrican eau alimentaire'},
+    {k:'real', i:'battery', n:'Batterie externe solaire', d:'Pour garder ton téléphone en vie, même s’il ne sert plus qu’à faire lampe.', w:'Se recharge au soleil, utile aussi en camping.', q:'batterie externe solaire'},
+    {k:'real', i:'aid', n:'Trousse de premiers secours', d:'Docteur Internet sera indisponible.', w:'Pansements, compresses, désinfectant : à avoir à la maison et dans la voiture.', q:'trousse premiers secours'},
+    {k:'real', i:'fire', n:'Briquet tempête et allumettes', d:'La technologie de pointe de l’an -400 000. Elle n’a jamais planté.', w:'Résiste au vent et à l’humidité.', q:'briquet tempete'},
+    {k:'joke', i:'book', n:'Un dictionnaire papier', d:'Pour le jour où plus personne ne saura écrire sans autocomplétion.', w:'Aucune mise à jour forcée. Jamais.', q:'dictionnaire larousse'},
+    {k:'joke', i:'cards', n:'Un jeu de cartes', d:'La seule intelligence qui ne trichera pas. Sauf ton oncle.', w:'Fonctionne sans batterie depuis le XIVe siècle.', q:'jeu de cartes'},
+    {k:'joke', i:'map', n:'Une carte routière', d:'Le GPS te fera tourner en rond, par principe.', w:'Bonus : tu ressembles à un aventurier.', q:'carte routiere france'},
+    {k:'joke', i:'disk', n:'Un disque dur externe', d:'Sauvegarde tes photos avant qu’elles deviennent des données d’entraînement.', w:'Vraiment utile, en vrai. Fais-le.', q:'disque dur externe'},
+    {k:'joke', i:'note', n:'Un carnet et un stylo', d:'Pour écrire des pensées que personne ne lira. Enfin un vrai espace privé.', w:'Aussi pour les 5 numéros importants du test.', q:'carnet stylo'},
+    {k:'joke', i:'board', n:'Un jeu d’échecs', d:'Pour t’entraîner contre l’ennemi. Tu vas perdre, mais avec dignité.', w:'Les longues soirées sans écran, c’est maintenant.', q:'jeu echecs bois'}
+  ];
+  const link = q => 'https://www.amazon.fr/s?k=' + encodeURIComponent(q) + (AMAZON_TAG ? '&tag=' + encodeURIComponent(AMAZON_TAG) : '');
+  const card = x => `<div class="item sunk">
+      <div class="top"><svg viewBox="0 0 16 16" aria-hidden="true" shape-rendering="crispEdges">${icon[x.i]}</svg><b>${esc(x.n)}</b></div>
+      <p>${esc(x.d)}</p>
+      <p class="why">${esc(x.w)}</p>
+      <a class="btn" href="${link(x.q)}" target="_blank" rel="sponsored noopener">Voir sur Amazon</a>
+    </div>`;
+  document.getElementById('kitReal').innerHTML = kit.filter(x => x.k==='real').map(card).join('');
+  document.getElementById('kitJoke').innerHTML = kit.filter(x => x.k==='joke').map(card).join('');
+})();
+</script>
+</body>
+</html>
