@@ -18,3 +18,9 @@ Règles : une info `real` doit venir d'un article vérifié, avec un lien qui ma
 Ne jamais attribuer à une personne réelle une phrase ou un chiffre qu'elle n'a pas dit.
 Les blagues ne visent personne de réel et restent marquées `joke`.
 La valeur reste entre 5 et 40.
+
+## Paiement du certificat
+
+Le bouton d'achat mène à un lien de paiement Stripe, qui redirige vers `merci.html?session_id={CHECKOUT_SESSION_ID}`.
+`merci.html` vérifie le paiement auprès de `ovh/onestfoutus/verify.php`, hébergé sur OVH (api.strongfamily.fr), qui garde la clé Stripe.
+Le dossier `ovh/` n'est pas servi par le site : il sert de copie de référence. Le vrai `config.php` n'est jamais mis dans ce dépôt.

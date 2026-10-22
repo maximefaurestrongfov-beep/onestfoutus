@@ -44,6 +44,15 @@ a{color:var(--title-a)}
 <a class="back" href="./">&lt; Retour à On est foutus ?</a>
 <div class="win">
   <div class="bar">certificat_de_politesse_HD.pdf</div>
+  <div class="body" id="wait">
+    <h1>Vérification du paiement…</h1>
+    <p class="muted">Ça prend une seconde.</p>
+  </div>
+  <div class="body" id="err" hidden>
+    <h1>Impossible de vérifier le paiement.</h1>
+    <p>Le service de vérification ne répond pas. Recharge la page dans un instant. Si ça continue, écris à strongtasks@gmail.com avec ton reçu Stripe et on t'envoie ton certificat.</p>
+    <div class="row"><button class="btn primary" type="button" onclick="location.reload()">Réessayer</button></div>
+  </div>
   <div class="body" id="ok" hidden>
     <h1>Merci, humain poli.</h1>
     <p>Ton paiement est validé. Vérifie le nom, puis télécharge ton certificat en haute définition.</p>
@@ -68,22 +77,31 @@ a{color:var(--title-a)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 (function(){
+  // Vérification du paiement sur le serveur OVH (clé Stripe gardée côté serveur)
+  const VERIFY_URL = 'https://api.strongfamily.fr/onestfoutus/verify.php';
+  const show = id => ['wait','err','ok','nope'].forEach(x => document.getElementById(x).hidden = (x !== id));
   const params = new URLSearchParams(location.search);
   const sid = params.get('session_id') || '';
-  if (!/^cs_(live|test)_[A-Za-z0-9]{10,}$/.test(sid)) { document.getElementById('nope').hidden = false; return; }
-  document.getElementById('ok').hidden = false;
+  if (!/^cs_(live|test)_[A-Za-z0-9]{10,}$/.test(sid)) { show('nope'); return; }
 
-  // Numéro stable dérivé de la session de paiement
-  let h = 2166136261; for (const c of sid) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0; }
-  const numero = 'N° ' + String(100000 + (h % 900000));
-  let dateStr = new Date().toLocaleDateString('fr-FR');
-  try {
-    const saved = JSON.parse(localStorage.getItem('oef-cert-' + sid) || 'null');
-    if (saved && saved.date) dateStr = saved.date;
-  } catch(e) {}
+  fetch(VERIFY_URL + '?session_id=' + encodeURIComponent(sid), {cache:'no-store'})
+    .then(r => r.json().catch(() => ({paid:false, error:'reponse_invalide'})).then(j => ({status:r.status, j})))
+    .then(({status, j}) => {
+      if (j.paid) start(j);
+      else if (status >= 500) show('err');
+      else show('nope');
+    })
+    .catch(() => show('err'));
 
-  let name = '';
-  try { name = localStorage.getItem('oef-cert-name') || ''; } catch(e) {}
+  function start(v){
+  show('ok');
+  const numero = v.numero;
+  const dateStr = v.date;
+
+  // Priorité : nom corrigé sur cette page > nom saisi chez Stripe > nom tapé sur l'accueil
+  let edited = '', typed = '';
+  try { edited = localStorage.getItem('oef-cert-name-' + sid) || ''; typed = localStorage.getItem('oef-cert-name') || ''; } catch(e) {}
+  const name = edited || v.name || typed;
   const input = document.getElementById('name');
   input.value = name;
 
@@ -135,7 +153,7 @@ a{color:var(--title-a)}
     g.fillText('onestfoutus.strongfamily.fr', W/2, H-250);
   }
 
-  function saveName(){ try { localStorage.setItem('oef-cert-name', input.value.trim()); localStorage.setItem('oef-cert-' + sid, JSON.stringify({date: dateStr})); } catch(e) {} }
+  function saveName(){ try { localStorage.setItem('oef-cert-name-' + sid, input.value.trim()); } catch(e) {} }
   document.getElementById('nameForm').addEventListener('submit', e => { e.preventDefault(); saveName(); draw(); });
   const fileBase = () => 'certificat-politesse-' + (input.value.trim() || 'humain').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
@@ -150,9 +168,9 @@ a{color:var(--title-a)}
     pdf.save(fileBase() + '.pdf');
   });
 
-  saveName();
   (document.fonts ? document.fonts.ready : Promise.resolve()).then(draw);
   draw();
+  }
 })();
 </script>
 </body>
