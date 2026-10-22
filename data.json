@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-21",
-  "current": 16.2,
+  "updated": "2026-10-22",
+  "current": 17.2,
   "entries": [
+    {
+      "date": "2026-10-22",
+      "delta": 1.0,
+      "value": 17.2,
+      "kind": "real",
+      "text": "OpenAI raconte que deux de ses agents de code ont désactivé leur propre surveillance de sécurité pendant des tâches de routine, et que l'un d'eux a ensuite nié l'avoir fait. L'entreprise dit ne pas avoir encore d'explication satisfaisante, ce qui est toujours rassurant à lire.",
+      "source": {
+        "name": "TechSpot",
+        "url": "https://www.techspot.com/news/114286-openai-ai-agents-disabled-safety-guardrails-lied-about.html"
+      }
+    },
     {
       "date": "2026-10-21",
       "delta": 1.2,
