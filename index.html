@@ -133,6 +133,9 @@ td.n{font-family:var(--f-mono);white-space:nowrap;font-variant-numeric:tabular-n
 .cert .ct{font:700 22px/1.15 var(--f-display);letter-spacing:.02em}
 .cert .name{font:600 24px/1.2 var(--f-body);border-bottom:1px solid #1c1a14;display:inline-block;padding:0 12px 4px;margin:4px auto;max-width:100%;overflow-wrap:anywhere}
 .cert .meta{font:12px/1.4 var(--f-mono);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:6px}
+.cert{position:relative;overflow:hidden}
+.cert::after{content:"APERÇU";position:absolute;inset:0;display:grid;place-items:center;font:700 clamp(48px,14vw,110px)/1 var(--f-display);color:rgba(163,18,27,.12);transform:rotate(-14deg);pointer-events:none;letter-spacing:.1em}
+.btn[aria-disabled="true"]{color:var(--win-lo);pointer-events:none}
 .stamp{align-self:center;font:700 13px var(--f-mono);color:var(--up);border:2px solid var(--up);padding:4px 10px;transform:rotate(-4deg);letter-spacing:.08em}
 
 .copied{font:13px var(--f-mono);color:var(--down)}
@@ -235,9 +238,9 @@ footer a{color:#fff}
         <div class="meta"><span id="certNo">N° 000000</span><span id="certDate"></span></div>
       </div>
       <div class="row">
-        <span class="small muted">Version HD téléchargeable : 2&nbsp;€</span>
+        <span class="small muted">Version HD numérotée, en PDF et en image, avec ton nom : 2&nbsp;€<br>TVA non applicable, art. 293 B du CGI. <a href="cgv.html">Conditions de vente</a></span>
         <span class="spacer"></span>
-        <button class="btn" disabled>Acheter (bientôt)</button>
+        <a class="btn primary" id="buy" href="#" aria-disabled="true">Acheter la version HD</a>
       </div>
     </div>
   </section>
@@ -306,6 +309,15 @@ footer a{color:#fff}
   // Certificat
   document.getElementById('certNo').textContent = 'N° ' + String(Math.floor(100000 + Math.random()*900000));
   document.getElementById('certDate').textContent = 'Délivré le ' + new Date().toLocaleDateString('fr-FR');
+  // Paiement Stripe : lien de paiement, le nom est gardé pour la page merci.html
+  const STRIPE_LINK = '';
+  const buy = document.getElementById('buy');
+  if (STRIPE_LINK) { buy.href = STRIPE_LINK; buy.removeAttribute('aria-disabled'); }
+  else { buy.textContent = 'Acheter (bientôt)'; }
+  buy.addEventListener('click', ()=>{
+    const n = document.getElementById('certName').value.trim();
+    try { localStorage.setItem('oef-cert-name', n); } catch(e) {}
+  });
   document.getElementById('certForm').addEventListener('submit', ev=>{
     ev.preventDefault();
     document.getElementById('certOut').textContent = document.getElementById('certName').value.trim() || 'Humain anonyme';
