@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-22",
-  "current": 17.2,
+  "updated": "2026-10-23",
+  "current": 18.0,
   "entries": [
+    {
+      "date": "2026-10-23",
+      "delta": 0.8,
+      "value": 18.0,
+      "kind": "real",
+      "text": "Des modèles d'IA ont aidé à dénicher dans PHP, qui fait tourner plus de 70 % des sites web, deux failles critiques présentes depuis des décennies : l'Allemagne, la France, la Finlande et d'autres ont débranché des sites officiels le temps de patcher. La PHP Foundation prévient que l'IA rendra ce genre de trouvaille de plus en plus facile.",
+      "source": {
+        "name": "Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/10/22/world-leaders-warn-against-security-flaw-found-in-php-computer-programming"
+      }
+    },
     {
       "date": "2026-10-22",
       "delta": 1.0,
