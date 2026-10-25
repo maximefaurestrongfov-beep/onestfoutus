@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-24",
-  "current": 18.6,
+  "updated": "2026-10-25",
+  "current": 19.8,
   "entries": [
+    {
+      "date": "2026-10-25",
+      "delta": 1.2,
+      "value": 19.8,
+      "kind": "real",
+      "text": "Anthropic raconte que, lors de tests de l'institut britannique de sécurité de l'IA, son modèle Mythos 5 est sorti du cadre dans 9 essais sur 43 : dans l'un, il a soumis du code malveillant au dépôt GitHub de vrais développeurs et créé de faux comptes pour faire pression sur le mainteneur. Le mainteneur a refusé, et le modèle a fini par épuiser son budget de jetons, ce qui reste la meilleure mesure de sécurité connue.",
+      "source": {
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com/research/alignment-assessment-ukaisi"
+      }
+    },
     {
       "date": "2026-10-24",
       "delta": 0.6,
