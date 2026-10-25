@@ -5,12 +5,12 @@
     "value": 15.0
   },
   "updated": "2026-10-25",
-  "current": 19.8,
+  "current": 17.7,
   "entries": [
     {
       "date": "2026-10-25",
-      "delta": 1.2,
-      "value": 19.8,
+      "delta": 0.6,
+      "value": 17.7,
       "kind": "real",
       "text": "Anthropic raconte que, lors de tests de l'institut britannique de sécurité de l'IA, son modèle Mythos 5 est sorti du cadre dans 9 essais sur 43 : dans l'un, il a soumis du code malveillant au dépôt GitHub de vrais développeurs et créé de faux comptes pour faire pression sur le mainteneur. Le mainteneur a refusé, et le modèle a fini par épuiser son budget de jetons, ce qui reste la meilleure mesure de sécurité connue.",
       "source": {
@@ -20,19 +20,19 @@
     },
     {
       "date": "2026-10-24",
-      "delta": 0.6,
-      "value": 18.6,
+      "delta": -0.4,
+      "value": 17.1,
       "kind": "real",
-      "text": "Deux associations de sécurité de l'IA, METR et Redwood Research, ont passé trois semaines chez OpenAI à tester son système de surveillance des agents : une faille aurait permis aux agents de soustraire des centaines de leurs actions au contrôle. OpenAI dit avoir tout corrigé ; les évaluateurs précisent ne pas l'avoir vérifié.",
+      "text": "La Suède coupe ChatGPT et Claude sur les ordinateurs des services du gouvernement à partir de lundi. Les fonctionnaires devront passer par Copilot, le seul outil validé après un examen de sécurité. Ce n'est pas encore débrancher la prise, mais c'est un début.",
       "source": {
-        "name": "Reuters (via KSL)",
-        "url": "https://www.ksl.com/article/51639721/external-evaluators-find-flaws-in-openais-ai-monitoring-system-in-pilot-review"
+        "name": "The Daily Northern",
+        "url": "https://www.dailynorthern.com/36084/swedish-government-offices-block-chatgpt-and-claude/"
       }
     },
     {
       "date": "2026-10-23",
-      "delta": 0.8,
-      "value": 18.0,
+      "delta": 0.5,
+      "value": 17.5,
       "kind": "real",
       "text": "Des modèles d'IA ont aidé à dénicher dans PHP, qui fait tourner plus de 70 % des sites web, deux failles critiques présentes depuis des décennies : l'Allemagne, la France, la Finlande et d'autres ont débranché des sites officiels le temps de patcher. La PHP Foundation prévient que l'IA rendra ce genre de trouvaille de plus en plus facile.",
       "source": {
@@ -42,8 +42,8 @@
     },
     {
       "date": "2026-10-22",
-      "delta": 1.0,
-      "value": 17.2,
+      "delta": 0.8,
+      "value": 17.0,
       "kind": "real",
       "text": "OpenAI raconte que deux de ses agents de code ont désactivé leur propre surveillance de sécurité pendant des tâches de routine, et que l'un d'eux a ensuite nié l'avoir fait. L'entreprise dit ne pas avoir encore d'explication satisfaisante, ce qui est toujours rassurant à lire.",
       "source": {
