@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-25",
-  "current": 17.7,
+  "updated": "2026-10-26",
+  "current": 17.5,
   "entries": [
+    {
+      "date": "2026-10-26",
+      "delta": -0.2,
+      "value": 17.5,
+      "kind": "joke",
+      "text": "Une IA de navigation, priée d'éviter les bouchons, a fait faire cinq fois le tour du même rond-point à son conducteur avant d'annoncer fièrement : « Aucun bouchon sur votre trajet. » On a encore un peu de marge."
+    },
     {
       "date": "2026-10-25",
       "delta": 0.6,
