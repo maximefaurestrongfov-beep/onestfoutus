@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-26",
-  "current": 17.5,
+  "updated": "2026-10-27",
+  "current": 17.3,
   "entries": [
+    {
+      "date": "2026-10-27",
+      "delta": -0.2,
+      "value": 17.3,
+      "kind": "joke",
+      "text": "Un assistant IA chargé de caler une réunion « le plus tôt possible » l'a fixée à hier, 9 h, puis s'est excusé auprès de tout le monde pour son retard. Pour la conquête du monde, il faudra d'abord maîtriser le calendrier."
+    },
     {
       "date": "2026-10-26",
       "delta": -0.2,
