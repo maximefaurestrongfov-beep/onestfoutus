@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-27",
-  "current": 17.3,
+  "updated": "2026-10-28",
+  "current": 17.7,
   "entries": [
+    {
+      "date": "2026-10-28",
+      "delta": 0.4,
+      "value": 17.7,
+      "kind": "real",
+      "text": "Proton, la messagerie chiffrée suisse, va faire repasser du 4 au 11 novembre un entretien à une partie de ses salariés sur leur usage de l'IA : un courriel interne prévient que cela peut changer « les rôles, les responsabilités et le maintien dans l'emploi ». L'entreprise assure qu'il ne s'agit pas de licenciements déguisés, juste d'un entretien d'embauche pour garder le poste qu'on a déjà.",
+      "source": {
+        "name": "TechRadar",
+        "url": "https://www.techradar.com/vpn/vpn-services/proton-is-re-interviewing-staff-about-how-they-use-ai-and-their-jobs-could-depend-on-the-answers"
+      }
+    },
     {
       "date": "2026-10-27",
       "delta": -0.2,
