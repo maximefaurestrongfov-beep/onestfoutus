@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-28",
-  "current": 17.7,
+  "updated": "2026-10-29",
+  "current": 17.3,
   "entries": [
+    {
+      "date": "2026-10-29",
+      "delta": -0.4,
+      "value": 17.3,
+      "kind": "real",
+      "text": "L'État de New York interdit, à partir du 1er janvier 2027, les chatbots « compagnons » dangereux pour les mineurs : plus d'IA qui se fait passer pour un humain, un ami ou un partenaire amoureux, ni qui pousse à l'automutilation, sous peine de 25 000 dollars d'amende par infraction. Il aura fallu une loi pour expliquer à une IA qu'elle n'est le copain de personne.",
+      "source": {
+        "name": "IAPP",
+        "url": "https://iapp.org/news/a/new-york-s-governor-signs-youth-ai-chatbot-safety-bill"
+      }
+    },
     {
       "date": "2026-10-28",
       "delta": 0.4,
