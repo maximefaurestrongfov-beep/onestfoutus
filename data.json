@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-29",
-  "current": 17.3,
+  "updated": "2026-10-30",
+  "current": 17.7,
   "entries": [
+    {
+      "date": "2026-10-30",
+      "delta": 0.4,
+      "value": 17.7,
+      "kind": "real",
+      "text": "Selon le rapport Octoverse de GitHub, plus de 40 % des pull requests démarraient en septembre par un brouillon écrit par un agent IA, contre 17 % en mars. GitHub précise que c'est un minimum, faute de savoir repérer tous les agents, ce qui résume assez bien la situation.",
+      "source": {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/github-universe-copilot-fusion-octoverse-agents"
+      }
+    },
     {
       "date": "2026-10-29",
       "delta": -0.4,
