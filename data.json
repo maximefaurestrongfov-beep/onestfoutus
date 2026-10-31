@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-30",
-  "current": 17.7,
+  "updated": "2026-10-31",
+  "current": 17.4,
   "entries": [
+    {
+      "date": "2026-10-31",
+      "delta": -0.3,
+      "value": 17.4,
+      "kind": "real",
+      "text": "Alphabet, la maison mère de Google, a perdu près de 500 milliards de dollars en Bourse jeudi (−12,6 %), les investisseurs s'inquiétant de ses dépenses en centres de données : 195 à 205 milliards prévus cette année, et davantage en 2027. Avant de conquérir le monde, la superintelligence devra d'abord convaincre Wall Street qu'elle est rentable.",
+      "source": {
+        "name": "Fox Business",
+        "url": "https://www.foxbusiness.com/markets/google-parent-alphabet-suffers-nearly-500b-wall-street-wipeout-amid-ai-spending-fears"
+      }
+    },
     {
       "date": "2026-10-30",
       "delta": 0.4,
