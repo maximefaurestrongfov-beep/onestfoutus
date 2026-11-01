@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-10-31",
-  "current": 17.4,
+  "updated": "2026-11-01",
+  "current": 17.8,
   "entries": [
+    {
+      "date": "2026-11-01",
+      "delta": 0.4,
+      "value": 17.8,
+      "kind": "real",
+      "text": "À deux jours des élections de mi-mandat américaines, une étude de Forum AI sur huit chatbots trouve qu'environ 40 % de leurs réponses sur le scrutin contiennent au moins une erreur factuelle. En Pennsylvanie, l'un d'eux a fixé la date limite pour demander un vote par correspondance au jour de l'élection, soit une semaine trop tard : l'IA ne vole pas encore les élections, elle vous fait juste rater la vôtre.",
+      "source": {
+        "name": "ARY News (AFP)",
+        "url": "https://arynews.tv/spewing-us-election-falsehoods-ai-chatbots-scrutiny"
+      }
+    },
     {
       "date": "2026-10-31",
       "delta": -0.3,
