@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-01",
-  "current": 17.8,
+  "updated": "2026-11-02",
+  "current": 17.5,
   "entries": [
+    {
+      "date": "2026-11-02",
+      "delta": -0.3,
+      "value": 17.5,
+      "kind": "joke",
+      "text": "Une IA de cuisine, priée de réduire le sel « de moitié » dans une recette de pâtes, a divisé par deux la quantité d'eau, puis a garanti que le résultat serait « plus concentré en saveurs ». Elle a encore du mal avec la notion de dosage, ce qui est plutôt bon signe."
+    },
     {
       "date": "2026-11-01",
       "delta": 0.4,
