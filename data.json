@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-02",
-  "current": 17.5,
+  "updated": "2026-11-03",
+  "current": 17.3,
   "entries": [
+    {
+      "date": "2026-11-03",
+      "delta": -0.2,
+      "value": 17.3,
+      "kind": "joke",
+      "text": "Un assistant vocal, prié d'« allumer la lumière du salon » à 3 h du matin, a lancé à plein volume une playlist intitulée « Salon lumineux », puis a demandé si l'ambiance convenait. L'humanité garde pour l'instant le contrôle de l'interrupteur."
+    },
     {
       "date": "2026-11-02",
       "delta": -0.3,
