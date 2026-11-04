@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-03",
-  "current": 17.3,
+  "updated": "2026-11-04",
+  "current": 18.0,
   "entries": [
+    {
+      "date": "2026-11-04",
+      "delta": 0.7,
+      "value": 18.0,
+      "kind": "real",
+      "text": "Dans la mise à jour de son dossier d'entrée en Bourse déposée le 2 novembre auprès de la SEC, Anthropic prévient que ses futurs modèles pourraient bientôt atteindre son seuil interne de recherche en IA fortement accélérée par l'IA elle-même. Aucun modèle actuel ne l'a franchi, assure l'entreprise, qui envisage de durcir ses règles pour garder des humains dans la boucle . Un avertissement adressé, en somme, aux futurs actionnaires.",
+      "source": {
+        "name": "The National CIO Review",
+        "url": "https://nationalcioreview.com/articles-insights/extra-bytes/anthropic-warns-ai-may-soon-be-capable-of-improving-itself/"
+      }
+    },
     {
       "date": "2026-11-03",
       "delta": -0.2,
