@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-04",
-  "current": 18.0,
+  "updated": "2026-11-05",
+  "current": 17.6,
   "entries": [
+    {
+      "date": "2026-11-05",
+      "delta": -0.4,
+      "value": 17.6,
+      "kind": "real",
+      "text": "Le 3 novembre, les électeurs de 18 communes de l'Ohio se prononçaient sur 21 mesures locales visant les centres de données : à Trenton, l'interdiction est passée à 80 % contre 20 %, malgré au moins 2,54 millions de dollars de publicités télévisées favorables aux constructions. La superintelligence a trouvé plus fort qu'elle : le référendum municipal.",
+      "source": {
+        "name": "AI Weekly (d'après Fortune)",
+        "url": "https://aiweekly.co/alerts/ohio-voters-reject-data-centers-across-21-ballot-measures"
+      }
+    },
     {
       "date": "2026-11-04",
       "delta": 0.7,
