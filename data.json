@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-05",
-  "current": 17.6,
+  "updated": "2026-11-06",
+  "current": 17.3,
   "entries": [
+    {
+      "date": "2026-11-06",
+      "delta": -0.3,
+      "value": 17.3,
+      "kind": "real",
+      "text": "Lors de la présentation de ses résultats trimestriels, Uber a indiqué que, pendant la semaine d'Halloween, sa plus chargée d'octobre, les agents IA avaient réservé en tout et pour tout quatre courses, plus environ 500 commandes Uber Eats, sur quelque 320 millions de trajets et commandes. Les agents autonomes qui devaient tout faire à notre place préfèrent visiblement rester à la maison.",
+      "source": {
+        "name": "Unite.AI (d'après TechCrunch)",
+        "url": "https://www.unite.ai/uber-says-ai-agents-booked-just-four-rides-during-halloween-week/"
+      }
+    },
     {
       "date": "2026-11-05",
       "delta": -0.4,
