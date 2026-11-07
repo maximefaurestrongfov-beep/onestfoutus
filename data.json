@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-06",
-  "current": 17.3,
+  "updated": "2026-11-07",
+  "current": 17.8,
   "entries": [
+    {
+      "date": "2026-11-07",
+      "delta": 0.5,
+      "value": 17.8,
+      "kind": "real",
+      "text": "Dans son dernier rapport sur la menace, le coordinateur néerlandais pour la sécurité et l'antiterrorisme (NCTV) constate que des logiciels malveillants peuvent désormais se connecter à un modèle d'IA en pleine attaque pour réécrire leur propre code, et juge que la question n'est plus de savoir si les Pays-Bas subiront une cyberattaque majeure, mais quand. Le ministre de la Justice reste confiant, l'IA aidant aussi à trouver les failles : on s'achemine vers un match IA contre IA, avec les humains en tribune.",
+      "source": {
+        "name": "NL Times (ANP)",
+        "url": "https://nltimes.nl/2026/11/06/dutch-security-agency-urges-businesses-prepare-faster-ai-driven-cyberattacks"
+      }
+    },
     {
       "date": "2026-11-06",
       "delta": -0.3,
