@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-07",
-  "current": 17.8,
+  "updated": "2026-11-08",
+  "current": 17.4,
   "entries": [
+    {
+      "date": "2026-11-08",
+      "delta": -0.4,
+      "value": 17.4,
+      "kind": "real",
+      "text": "Après avoir remporté le Congrès américain, les démocrates préparent pour janvier une série de lois sur l'IA, selon Reuters : tests indépendants des modèles les plus avancés, responsabilité des entreprises en cas de dommages, protection contre la hausse des factures d'électricité liée aux centres de données. Reste Donald Trump, qui a balayé à plusieurs reprises les appels à des règles obligatoires, mais la superintelligence pourrait bientôt devoir passer le contrôle technique.",
+      "source": {
+        "name": "West Hawaii Today (Reuters)",
+        "url": "https://www.westhawaiitoday.com/2026/11/07/nation-world-news/democrats-planning-flood-of-ai-bills-when-they-take-control-of-congress/"
+      }
+    },
     {
       "date": "2026-11-07",
       "delta": 0.5,
