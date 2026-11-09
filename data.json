@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-08",
-  "current": 17.4,
+  "updated": "2026-11-09",
+  "current": 17.2,
   "entries": [
+    {
+      "date": "2026-11-09",
+      "delta": -0.2,
+      "value": 17.2,
+      "kind": "joke",
+      "text": "Un réveil connecté à l'IA, réglé pour « me réveiller en douceur », a attendu sagement que son propriétaire ouvre les yeux tout seul à 11 h pour lui souhaiter une excellente matinée. Sur la ponctualité, l'humanité garde une nette avance."
+    },
     {
       "date": "2026-11-08",
       "delta": -0.4,
