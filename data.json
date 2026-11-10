@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-09",
-  "current": 17.2,
+  "updated": "2026-11-10",
+  "current": 17.5,
   "entries": [
+    {
+      "date": "2026-11-10",
+      "delta": 0.3,
+      "value": 17.5,
+      "kind": "real",
+      "text": "Qantas va supprimer 850 postes administratifs, d'abord dans la finance, les achats et le marketing, dont une partie des services sera confiée à Accenture, surtout depuis l'Inde, avec de premiers changements d'ici mi-2027. La PDG Vanessa Hudson y voit un moyen d'« accélérer notre utilisation de l'IA » (traduit) : l'IA ne prend pas encore les commandes de l'avion, mais elle s'installe déjà dans les bureaux de la compagnie.",
+      "source": {
+        "name": "ABC News (Australie)",
+        "url": "https://www.abc.net.au/news/2026-11-10/850-jobs-to-go-from-qantas-as-airline-moves-roles-overseas/107368120"
+      }
+    },
     {
       "date": "2026-11-09",
       "delta": -0.2,
