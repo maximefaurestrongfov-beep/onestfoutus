@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-10",
-  "current": 17.5,
+  "updated": "2026-11-11",
+  "current": 17.3,
   "entries": [
+    {
+      "date": "2026-11-11",
+      "delta": -0.2,
+      "value": 17.3,
+      "kind": "joke",
+      "text": "Un assistant de cuisine à l'IA, prié d'adapter une recette de gâteau pour deux personnes au lieu de quatre, a divisé la farine, le sucre et aussi le temps de cuisson par deux. Le gâteau n'a jamais pris ; la conquête du monde non plus."
+    },
     {
       "date": "2026-11-10",
       "delta": 0.3,
