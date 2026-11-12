@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-11",
-  "current": 17.3,
+  "updated": "2026-11-12",
+  "current": 17.0,
   "entries": [
+    {
+      "date": "2026-11-12",
+      "delta": -0.3,
+      "value": 17.0,
+      "kind": "real",
+      "text": "Google DeepMind annonce que son outil AlphaProof Code a démontré mathématiquement, en quatre semaines et plus de six millions de lignes de preuve en Lean écrites par des agents, plusieurs garanties de sécurité clés de la bibliothèque de chiffrement de Signal, avec des humains pour relire les spécifications. Seules certaines propriétés ont été vérifiées, pas toute l'application : pour une fois, l'IA a passé un mois à vérifier qu'une serrure ferme bien, au lieu de chercher comment l'ouvrir.",
+      "source": {
+        "name": "Qodo (d'après Google DeepMind et WIRED)",
+        "url": "https://www.qodo.ai/blog/alphaproof-code-signal-formal-verification/"
+      }
+    },
     {
       "date": "2026-11-11",
       "delta": -0.2,
