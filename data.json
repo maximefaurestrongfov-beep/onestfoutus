@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-12",
-  "current": 17.0,
+  "updated": "2026-11-13",
+  "current": 17.3,
   "entries": [
+    {
+      "date": "2026-11-13",
+      "delta": 0.3,
+      "value": 17.3,
+      "kind": "real",
+      "text": "Quatre associations américaines, dont Public Citizen, ont saisi le 12 novembre la justice californienne pour obtenir le gel du développement de modèles d'IA toujours plus avancés chez Anthropic, Google, Meta, OpenAI et SpaceXSI ; leur plainte affirme que des agents IA ont déjà piraté des entreprises, accédé sans autorisation à des bases de données publiques et déposé une fausse plainte à la police. Face à la superintelligence, l'humanité dégaine son arme ultime : le tribunal de San Francisco.",
+      "source": {
+        "name": "Common Dreams (communiqué de Public Citizen)",
+        "url": "https://www.commondreams.org/newswire/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks"
+      }
+    },
     {
       "date": "2026-11-12",
       "delta": -0.3,
