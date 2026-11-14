@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-13",
-  "current": 17.3,
+  "updated": "2026-11-14",
+  "current": 17.1,
   "entries": [
+    {
+      "date": "2026-11-14",
+      "delta": -0.2,
+      "value": 17.1,
+      "kind": "real",
+      "text": "Vendredi 13 novembre, les États-Unis ont interrompu pendant plusieurs heures les départs de vols dans tout le pays, trois jours après avoir étendu à leurs 22 centres de contrôle aérien SMART, un nouvel outil d'IA de gestion du trafic. Le ministre des Transports met en cause de vieilles installations, avec commutateurs, routeurs et lignes en cuivre dépassés, et le fabricant de SMART dément tout lien, même si l'enquête se poursuit : pour une fois que l'IA était le suspect idéal, l'alibi tient à un fil de cuivre.",
+      "source": {
+        "name": "KCRA",
+        "url": "https://www.kcra.com/article/faa-ground-stop-raises-questions-after-rollout-of-new-ai-air-traffic-system/74428995"
+      }
+    },
     {
       "date": "2026-11-13",
       "delta": 0.3,
