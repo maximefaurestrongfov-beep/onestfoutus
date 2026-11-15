@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-14",
-  "current": 17.1,
+  "updated": "2026-11-15",
+  "current": 16.9,
   "entries": [
+    {
+      "date": "2026-11-15",
+      "delta": -0.2,
+      "value": 16.9,
+      "kind": "joke",
+      "text": "Une application photo à l'IA, priée de retrouver « toutes les photos du chat », a rassemblé 412 photos de pains de campagne et classé le vrai chat, roulé en boule sur le canapé, dans l'album « Viennoiseries ». Pour reconnaître ses ennemis, la machine a encore du travail."
+    },
     {
       "date": "2026-11-14",
       "delta": -0.2,
