@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-15",
-  "current": 16.9,
+  "updated": "2026-11-16",
+  "current": 17.2,
   "entries": [
+    {
+      "date": "2026-11-16",
+      "delta": 0.3,
+      "value": 17.2,
+      "kind": "real",
+      "text": "Le télé-achat sud-coréen Hyundai Home Shopping diffuse à partir du 16 novembre « AI-REAL », des émissions de vente entièrement produites par l'IA, image et voix comprises, sans tournage ni animateur à l'antenne ; selon l'entreprise, les essais ont réduit de plus de 80 % les frais de préparation et de vidéos de ses fournisseurs. Premier produit vendu : des kiwis de Jeju ; l'IA ne remplace pas encore tout le monde, mais elle a déjà pris le micro.",
+      "source": {
+        "name": "Seoul Economic Daily",
+        "url": "https://en.sedaily.com/business/2026/11/15/no-show-hosts-no-cameras-hyundai-home-shopping-launches"
+      }
+    },
     {
       "date": "2026-11-15",
       "delta": -0.2,
