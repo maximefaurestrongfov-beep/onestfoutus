@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-16",
-  "current": 17.2,
+  "updated": "2026-11-17",
+  "current": 17.5,
   "entries": [
+    {
+      "date": "2026-11-17",
+      "delta": 0.3,
+      "value": 17.5,
+      "kind": "real",
+      "text": "OpenAI a lancé ChatGPT Wallet, développé avec American Express, Chase, Mastercard et Visa, qui permet à ses agents personnels « dots » de faire des achats à la place de l'utilisateur, d'abord pour un nombre limité d'abonnés Pro aux États-Unis ; chaque achat doit encore être validé, par exemple par Face ID ou empreinte digitale, et l'entreprise envisage à terme des achats entièrement délégués, avec des plafonds de dépenses. L'IA n'a pas encore le pouvoir, mais elle a déjà la carte bleue.",
+      "source": {
+        "name": "Digital Commerce 360",
+        "url": "https://www.digitalcommerce360.com/2026/11/16/openai-chatgpt-wallet-for-ai-purchases-through-retailer-checkouts/"
+      }
+    },
     {
       "date": "2026-11-16",
       "delta": 0.3,
