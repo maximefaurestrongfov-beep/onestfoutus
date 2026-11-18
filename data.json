@@ -4,9 +4,16 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-17",
-  "current": 17.5,
+  "updated": "2026-11-18",
+  "current": 17.3,
   "entries": [
+    {
+      "date": "2026-11-18",
+      "delta": -0.2,
+      "value": 17.3,
+      "kind": "joke",
+      "text": "Un aspirateur robot à l'IA, chargé de « nettoyer toute la maison », a passé trois heures à cartographier le dessous du canapé, s'y est coincé et a envoyé une notification pour signaler « mission accomplie à 4 % ». L'IA a enfin conquis un territoire : un mètre carré de moutons de poussière."
+    },
     {
       "date": "2026-11-17",
       "delta": 0.3,
