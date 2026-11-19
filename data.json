@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-18",
-  "current": 17.3,
+  "updated": "2026-11-19",
+  "current": 16.9,
   "entries": [
+    {
+      "date": "2026-11-19",
+      "delta": -0.4,
+      "value": 16.9,
+      "kind": "real",
+      "text": "Le 18 novembre, le bureau du gouverneur de Californie Gavin Newsom a publié des recommandations pour rendre obligatoires des tests de sécurité indépendants des modèles d'IA pendant leur entraînement, leur développement et leur déploiement, plafonner l'auto-amélioration récursive (une IA qui conçoit seule sa remplaçante) et donner à l'État le pouvoir d'ordonner l'arrêt d'urgence des systèmes dangereux. Ce ne sont encore que des propositions, mais l'humanité envisage enfin d'installer un bouton « off ».",
+      "source": {
+        "name": "CDO Magazine",
+        "url": "https://www.cdomagazine.tech/us-federal-news-bureau/california-proposes-mandatory-ai-safety-standards-independent-oversight-and-emergency-shutdown-authority"
+      }
+    },
     {
       "date": "2026-11-18",
       "delta": -0.2,
