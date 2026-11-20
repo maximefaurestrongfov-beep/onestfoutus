@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-19",
-  "current": 16.9,
+  "updated": "2026-11-20",
+  "current": 16.6,
   "entries": [
+    {
+      "date": "2026-11-20",
+      "delta": -0.3,
+      "value": 16.6,
+      "kind": "real",
+      "text": "Coinbase affirme que ses systèmes antifraude à l'IA ont bloqué environ 4,7 millions de dollars de transferts, soit environ 91 % des tentatives, vers une arnaque diffusée sur YouTube : un faux direct de démonstration de « voiture volante » Tesla, où un Elon Musk généré par IA promettait de doubler toute cryptomonnaie envoyée. Selon l'entreprise, un agent IA a même expliqué aux clients, sans intervention humaine, qu'ils étaient en train de se faire avoir : pour une fois, c'est une IA qui empêche les humains de croire une IA.",
+      "source": {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/"
+      }
+    },
     {
       "date": "2026-11-19",
       "delta": -0.4,
