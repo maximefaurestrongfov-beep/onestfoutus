@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-20",
-  "current": 16.6,
+  "updated": "2026-11-21",
+  "current": 16.3,
   "entries": [
+    {
+      "date": "2026-11-21",
+      "delta": -0.3,
+      "value": 16.3,
+      "kind": "real",
+      "text": "Vendredi 20 novembre, la fébrilité autour de l'IA a fait dérailler les Bourses mondiales : le Nasdaq a plongé de 5,28 %, effaçant tous ses gains de l'année, des investisseurs doutant que les dépenses colossales dans l'IA finissent par rapporter. La superintelligence risque de manquer de budget avant de manquer de scrupules.",
+      "source": {
+        "name": "Boursorama (AFP)",
+        "url": "https://www.boursorama.com/bourse/actualites/les-marches-boursiers-mondiaux-ebranles-par-la-febrilite-autour-de-l-ia-78c05f92ea9014ac2e55e177676fcb49"
+      }
+    },
     {
       "date": "2026-11-20",
       "delta": -0.3,
