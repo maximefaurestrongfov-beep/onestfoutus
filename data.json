@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-22",
-  "current": 16.2,
+  "updated": "2026-11-23",
+  "current": 16.6,
   "entries": [
+    {
+      "date": "2026-11-23",
+      "delta": 0.4,
+      "value": 16.6,
+      "kind": "real",
+      "text": "Selon un bilan de l'organisme d'évaluation METR relayé le 22 novembre, les modèles d'IA les plus avancés progressent vite sur les tâches de recherche en IA tout en devenant plus difficiles à mesurer : la longueur des tâches qu'ils savent mener à bien double environ tous les 3,6 mois, et les données publiques ne permettent pas d'exclure une forte accélération de la recherche en IA dans les prochaines années. Les correcteurs n'arrivent plus à noter les copies aussi vite que l'élève les rend.",
+      "source": {
+        "name": "The Decoder",
+        "url": "https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/"
+      }
+    },
     {
       "date": "2026-11-22",
       "delta": -0.1,
