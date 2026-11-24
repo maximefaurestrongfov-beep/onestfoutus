@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-23",
-  "current": 16.6,
+  "updated": "2026-11-24",
+  "current": 16.2,
   "entries": [
+    {
+      "date": "2026-11-24",
+      "delta": -0.4,
+      "value": 16.2,
+      "kind": "real",
+      "text": "Selon le secrétaire américain au Trésor Scott Bessent, interrogé par CNBC le 20 novembre, Donald Trump et Xi Jinping sont convenus que des humains doivent toujours être impliqués dans les décisions militaires prises par l'IA, et qu'aucune opération militaire majeure ne doit être lancée sans un être humain. Ni texte signé ni calendrier pour l'instant, mais les deux premières armées du monde s'accordent au moins sur un point : laisser quelqu'un à côté du bouton.",
+      "source": {
+        "name": "The Epoch Times",
+        "url": "https://www.theepochtimes.com/us/trump-and-xi-agree-military-ai-decisions-should-require-human-involvement-bessent-says-6127475"
+      }
+    },
     {
       "date": "2026-11-23",
       "delta": 0.4,
