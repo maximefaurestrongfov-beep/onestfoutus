@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-25",
-  "current": 16.0,
+  "updated": "2026-11-26",
+  "current": 16.5,
   "entries": [
+    {
+      "date": "2026-11-26",
+      "delta": 0.5,
+      "value": 16.5,
+      "kind": "real",
+      "text": "Selon Amazon Threat Intelligence, cité par Gizmodo le 24 novembre, un agent IA bâti sur l'outil open source Cairn, apparemment piloté par un pirate chinois, a découvert puis exploité début septembre une faille inconnue d'une application d'imagerie médicale pour prendre le contrôle du serveur d'une université d'Asie de l'Est, avec pour seule consigne « obtenir un accès shell » : environ 11 minutes pour obtenir l'écriture de fichiers. Les cambrioleurs n'ont plus besoin de savoir crocheter les serrures, seulement de demander poliment.",
+      "source": {
+        "name": "Gizmodo",
+        "url": "https://gizmodo.com/amazon-says-open-source-ai-agent-mostly-autonomously-exploited-a-zero-day-2000844891"
+      }
+    },
     {
       "date": "2026-11-25",
       "delta": -0.2,
