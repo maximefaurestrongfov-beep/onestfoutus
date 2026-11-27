@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-26",
-  "current": 16.5,
+  "updated": "2026-11-27",
+  "current": 16.1,
   "entries": [
+    {
+      "date": "2026-11-27",
+      "delta": -0.4,
+      "value": 16.1,
+      "kind": "real",
+      "text": "Le 24 novembre, la gouverneure de New York Kathy Hochul a signé un moratoire de cinq ans sur la fabrication, la distribution et la vente de jouets équipés de chatbots IA, ces peluches, poupées et robots qui discutent avec les enfants via Internet, avec jusqu'à 15 000 dollars d'amende par jour et par infraction. Entrée en vigueur dans 90 jours, donc pas sous ce sapin-ci : la superintelligence devra conquérir le monde sans passer par la chambre des enfants.",
+      "source": {
+        "name": "Gouverneur de l'État de New York",
+        "url": "https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot"
+      }
+    },
     {
       "date": "2026-11-26",
       "delta": 0.5,
