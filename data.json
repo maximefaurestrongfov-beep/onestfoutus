@@ -4,9 +4,20 @@
     "date": "2026-10-20",
     "value": 15.0
   },
-  "updated": "2026-11-27",
-  "current": 16.1,
+  "updated": "2026-11-28",
+  "current": 16.5,
   "entries": [
+    {
+      "date": "2026-11-28",
+      "delta": 0.4,
+      "value": 16.5,
+      "kind": "real",
+      "text": "Selon Bloomberg, relayé par Euronews le 27 novembre, l'éditeur allemand SAP prépare une restructuration liée à l'IA avec au moins 10 000 suppressions de postes, soit environ 9 % de ses effectifs mondiaux si elles sont confirmées, chiffre qui pourrait encore bouger après les discussions avec les représentants du personnel ; SAP dit n'avoir rien décidé et ne pas commenter les spéculations. Le logiciel qui gère les fiches de paie apprend à se passer de ceux qui les touchent.",
+      "source": {
+        "name": "Euronews",
+        "url": "https://de.euronews.com/2026/11/27/sap-pruft-laut-medien-ki-umbau-mit-mindestens-10000-stellen"
+      }
+    },
     {
       "date": "2026-11-27",
       "delta": -0.4,
